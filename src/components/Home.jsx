@@ -1,85 +1,32 @@
+import * as React from 'react';
+import Header from './Header';
+import JusticeLeague from './Foto/JusticeLeague.png';
+import Flash from './Foto/hero-image.webp';
+import BatmanVDoomsday from './Foto/Batman_v_Doomsday_20.webp';
+import Together from './Foto/3.jpg';
+import BatmanSolo from './Foto/4.jpg';
 function Home() {
   return (
     <div>
-
-    {/* Header Section Start */}
-    <header className="absolute left-0 top-0 z-10 flex w-full items-center bg-transparent">
-        <div className="container">
-          <div className="relative flex items-center justify-between">
-            <div className="px-4">
-              <a href="#home" className="block py-6 text-lg font-bold text-red-600">Justice League</a>
-            </div>
-            <div className="flex items-center px-4">
-              <button id="hamburger" name="hamburger" type="button" className="absolute right-4 block lg:hidden">
-                <span className="hamburger-line transition duration-300 ease-in-out origin-top-left"></span>
-                <span className="hamburger-line transition duration-300 ease-in-out"></span>
-                <span className="hamburger-line transition duration-300 ease-in-out origin-bottom-left"></span>
-              </button>
-              
-              <nav id="nav-menu" className="hidden absolute py-5 bg-white shadow-lg rounded-lg max-w-[250px] w-full right-4 top-full lg:block lg:static lg:bg-transparent lg:max-w-full lg:shadow-none lg:rounded-none">
-                <ul className="block lg:flex">
-                    <li className="group">
-                        <a href="#home" className="text-base text-gray-700 py-2 mx-8 flex group-hover:text-purple-700">
-                            Beranda
-                        </a>
-                    </li>
-                    <li className="group">
-                        <a href="#about" className="text-base text-gray-700 py-2 mx-8 flex group-hover:text-purple-700">
-                            About US
-                        </a>
-                    </li>
-                    <li className="group">
-                        <a href="#portfolio" className="text-base text-gray-700 py-2 mx-8 flex group-hover:text-purple-700">
-                            Portfolio
-                        </a>
-                    </li>
-                    <li className="group">
-                        <a href="#clients" className="text-base text-gray-700 py-2 mx-8 flex group-hover:text-purple-700">Clients</a>
-                    </li>
-                    <li className="group">
-                        <a href="#blog" className="text-base text-gray-700 py-2 mx-8 flex group-hover:text-purple-700">Blog</a>
-                    </li>
-                </ul>
-              </nav>
-            </div>
-          </div>
-        </div>
-    </header>
-    {/* Header Section End */}
-
+    <Header/>
     {/* Hero Section Start */}
     <section id="home" className="pt-36">
-        <div className="container">
-            <div className="flex flex-col">
-                <div className="w-full self-center px-4 xl:w-1/2">
+  <div className="container mx-auto px-4 flex flex-col md:flex-row">
+    <div className="w-full md:w-1/2 px-4">
+      <h1 className="text-4xl md:text-5xl font-bold text-primary mb-4">Hello Everyone 🦇<br /> 
+      <span class="block font-bold text-dark text-4xl mt-1">
+        Justice League
+      </span></h1>
+      <h2 className="text-lg md:text-xl font-light text-slate-500 mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit.</h2>
+      <p className="text-base md:text-lg font-serif text-blue-950 mb-8 leading-relaxed">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Saepe eaque tempore nisi possimus.</p>
+      <a href="#" className="text-sm text-white font-thin bg-blue-500 py-2 px-5 rounded-full hover:shadow-lg hover:opacity-85">Contact Us</a>
+    </div>
+    <div className="w-full md:w-1/2 px-4 mt-10 lg:mt-0">
+      <img src={JusticeLeague} alt="Bruce Wayne" className="w-full max-w-lg mx-auto rounded-lg" />
+    </div>
+  </div>
+</section>
 
-                    <h1 className="text-base font-semibold text-primary md:text-sl">
-                        Hello Everyone 🦇,   
-                        <span className="block font-bold text-dark text-4xl mt-1">
-                            Justice League
-                        </span>
-                    </h1>
-
-                    <h2 className="font-light text-slate-500 text-lg mb-5">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                    </h2>
-
-                    <p className="font-serif text-blue-950 mb-5 leading-relaxed">
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Saepe eaque tempore nisi possimus. 
-                    </p>
-
-                    <a href="#" className="text-sm text-white font-thin  bg-blue-500 py-2 px-5 rounded-full hover:shadow-lg hover:opacity-85">
-                        Contact Us
-                    </a>
-                </div>
-                <div className="w-full self-end px-4 xl:w-1/2">
-                    <div className="relative mt-10 lg:mt-9 lg:right-0">
-                        <img src="dist/img/JusticeLeague.png" alt="Bruce Wayne" className="max-w-full mx-auto"/>  
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
     {/* Hero Section End */}
 
     {/* About Section Start */}
@@ -148,7 +95,7 @@ function Home() {
             <div className="w-full px-4 flex flex-wrap justify-center xl:w-10/12 xl:mx-auto">
                 <div className="mb-12 p-4 md:w-1/2">
                     <div className="rounded-md shadow-md overflow-hidden">
-                        <img src="dist/img/portfolio/hero-image.webp" alt="landing Page" width="w-full"/>
+                        <img src={Flash} alt="landing Page" width="w-full"/>
                     </div>
                     <h3 className="font-semibold text-xl text-dark mt-5 mb-3">
                         Back in Time by Flash
@@ -159,7 +106,7 @@ function Home() {
                 </div>
                 <div className="mb-12 p-4 md:w-1/2">
                     <div className="rounded-md shadow-md overflow-hidden">
-                        <img src="dist/img/portfolio/Batman_v_Doomsday_20.webp" alt="landing Page" width="w-full"/>
+                        <img src={BatmanVDoomsday} alt="landing Page" width="w-full"/>
                     </div>
                     <h3 className="font-semibold text-xl text-dark mt-5 mb-3">
                         Save the world from Doomsday
@@ -170,7 +117,7 @@ function Home() {
                 </div>
                 <div className="mb-12 p-4 md:w-1/2">
                     <div className="rounded-md shadow-md overflow-hidden">
-                        <img src="dist/img/portfolio/3.jpg" alt="landing Page" width="w-full"/>
+                        <img src={Together} alt="landing Page" width="w-full"/>
                     </div>
                     <h3 className="font-semibold text-xl text-dark mt-5 mb-3">
                         Save the World from Steppenwolf
@@ -181,7 +128,7 @@ function Home() {
                 </div>
                 <div className="mb-12 p-4 md:w-1/2">
                     <div className="rounded-md shadow-md overflow-hidden">
-                        <img src="dist/img/portfolio/4.jpg" alt="landing Page" width="w-full" />
+                        <img src={BatmanSolo} alt="landing Page" width="w-full" />
                     </div>
                     <h3 className="font-semibold text-xl text-dark mt-5 mb-3">
                         Save Gotham from Bane
